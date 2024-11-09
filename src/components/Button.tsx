@@ -31,6 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
     border: none;
     border-radius: 8px;
     transition: all 0.3s;
+    cursor: pointer;
 
     &:hover {
       filter: brightness(0.8);

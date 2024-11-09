@@ -6,8 +6,15 @@ import Logo from "@/../public/logo.svg";
 import { Colors } from "@/styles/color";
 import { Button } from "./Button";
 import { Text } from "./Text";
+import { useRouter } from "next/navigation";
+import styled from "@emotion/styled";
 
 export default function Navbar() {
+  const router = useRouter();
+
+  const LogoWrap = styled.div`
+    cursor: pointer;
+  `;
   return (
     <Box
       margin="20px"
@@ -19,7 +26,9 @@ export default function Navbar() {
       alignItems="center"
       justifyContent="space-between"
     >
-      <Image src={Logo} alt="✨ Journal Logo" />
+      <LogoWrap onClick={() => router.push("/")}>
+        <Image src={Logo} alt="✨ Journal Logo" />
+      </LogoWrap>
       <Button
         padding="8px 12px"
         onClick={() => {

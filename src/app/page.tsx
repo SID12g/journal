@@ -1,7 +1,5 @@
 "use client";
 
-import Alert from "@/components/Alert";
-
 export default function Home() {
   return (
     <>
