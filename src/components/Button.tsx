@@ -3,36 +3,34 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-interface BoxProps {
+interface ButtonProps {
   width?: string;
   height?: string;
   margin?: string;
   padding?: string;
   backgroundColor?: string;
-  borderColor?: string;
-  borderRadius?: string;
-  children?: React.ReactNode;
+  onClick: () => void;
+  children: React.ReactNode;
 }
 
-export const Box: React.FC<BoxProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   width,
   height,
   margin,
   padding,
   backgroundColor,
-  borderColor,
-  borderRadius,
+  onClick,
   children,
 }) => {
-  const StyledBox = styled.div`
+  const StyledButton = styled.button`
     width: ${width};
     height: ${height};
     margin: ${margin};
     padding: ${padding};
     background-color: ${backgroundColor};
-    border: 1px solid ${borderColor};
-    border-radius: ${borderRadius};
+    border: none;
+    border-radius: 8px;
   `;
 
-  return <StyledBox>{children}</StyledBox>;
+  return <StyledButton onClick={() => onClick()}>{children}</StyledButton>;
 };
