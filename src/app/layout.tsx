@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { Colors } from "@/styles/color";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",
@@ -22,7 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={wantedSans.variable}>{children}</body>
+      <body
+        style={{ backgroundColor: Colors.primary_color, margin: 0 }}
+        className={wantedSans.variable}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

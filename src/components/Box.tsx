@@ -11,6 +11,9 @@ interface BoxProps {
   backgroundColor?: string;
   borderColor?: string;
   borderRadius?: string;
+  flexDirection?: string;
+  alignItems?: string;
+  justifyContent?: string;
   children?: React.ReactNode;
 }
 
@@ -22,6 +25,9 @@ export const Box: React.FC<BoxProps> = ({
   backgroundColor,
   borderColor,
   borderRadius,
+  flexDirection,
+  alignItems,
+  justifyContent,
   children,
 }) => {
   const StyledBox = styled.div`
@@ -32,6 +38,10 @@ export const Box: React.FC<BoxProps> = ({
     background-color: ${backgroundColor};
     border: 1px solid ${borderColor};
     border-radius: ${borderRadius};
+    display: flex;
+    flex-direction: ${flexDirection};
+    align-items: ${alignItems};
+    justify-content: ${justifyContent};
   `;
 
   return <StyledBox>{children}</StyledBox>;
