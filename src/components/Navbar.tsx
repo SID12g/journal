@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { Box } from "./Box";
-import Logo from "@/../public/logo.svg";
 import { Colors } from "@/styles/colors";
 import { Button } from "./Button";
 import { Text } from "./Text";
@@ -15,7 +13,7 @@ export default function Navbar() {
   const NavbarWrap = styled.div`
     width: 100%;
     position: fixed;
-    top: 20px;
+    top: 12px;
   `;
   const LogoWrap = styled.div`
     cursor: pointer;
@@ -33,7 +31,9 @@ export default function Navbar() {
         justifyContent="space-between"
       >
         <LogoWrap onClick={() => router.push("/")}>
-          <Image src={Logo} alt="✨ Journal Logo" />
+          <Text size="20px" weight="400">
+            ✨ Journal
+          </Text>
         </LogoWrap>
         <Button
           padding="8px 12px"

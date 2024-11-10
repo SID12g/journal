@@ -34,9 +34,9 @@ export default function RootLayout({
         className={wantedSans.variable}
       >
         <Navbar />
-        <Box height="120px" borderColor="none" />
+        <Box height="99px" borderColor="none" />
         <main style={{ marginLeft: 20, marginRight: 20 }}>{children}</main>
-        <Box height="120px" borderColor="none" />
+        <Box height="85px" borderColor="none" />
         <Bottombar />
       </body>
     </html>
