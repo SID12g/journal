@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji");
+
 * {
-  font-family: var(--font-wanted-sans);
+  font-family: var(--font-wanted-sans), "Noto Color Emoji";
   text-decoration: none;
   color: white;
 }

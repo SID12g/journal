@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Colors } from "@/styles/colors";
 import Bottombar from "@/components/Bottombar";
 import { Box } from "@/components/Box";
+import { Main } from "@/components/Main";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",
@@ -33,9 +34,11 @@ export default function RootLayout({
         }}
         className={wantedSans.variable}
       >
-        <Navbar />
         <Box height="99px" borderColor="none" />
-        <main style={{ marginLeft: 20, marginRight: 20 }}>{children}</main>
+        <Navbar />
+
+        <Main>{children}</Main>
+
         <Box height="85px" borderColor="none" />
         <Bottombar />
       </body>
