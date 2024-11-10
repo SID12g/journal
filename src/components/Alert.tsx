@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Text } from "./Text";
-import { Colors } from "@/styles/color";
+import { Colors } from "@/styles/colors";
 import styled from "@emotion/styled";
 import { Box } from "./Box";
 import { Button } from "./Button";

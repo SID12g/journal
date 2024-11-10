@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Colors } from "@/styles/color";
+import { Colors } from "@/styles/colors";
 import Bottombar from "@/components/Bottombar";
+import { Box } from "@/components/Box";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",
@@ -33,8 +34,10 @@ export default function RootLayout({
         className={wantedSans.variable}
       >
         <Navbar />
+        <Box height="120px" borderColor="none" />
+        <main style={{ marginLeft: 20, marginRight: 20 }}>{children}</main>
+        <Box height="120px" borderColor="none" />
         <Bottombar />
-        {children}
       </body>
     </html>
   );

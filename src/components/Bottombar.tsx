@@ -1,6 +1,6 @@
 "use client";
 
-import { Colors } from "@/styles/color";
+import { Colors } from "@/styles/colors";
 import { Box } from "./Box";
 import styled from "@emotion/styled";
 import { Text } from "./Text";
@@ -12,7 +12,7 @@ export default function Bottombar() {
 
   const BottomtabWrap = styled.div`
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 20px;
   `;
 
