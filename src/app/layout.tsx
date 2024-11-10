@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Colors } from "@/styles/color";
+import Bottombar from "@/components/Bottombar";
 
 const wantedSans = localFont({
   src: "./fonts/WantedSansVariable.woff2",
@@ -25,10 +26,14 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        style={{ backgroundColor: Colors.primary_color, margin: 0 }}
+        style={{
+          backgroundColor: Colors.primary_color,
+          margin: 0,
+        }}
         className={wantedSans.variable}
       >
         <Navbar />
+        <Bottombar />
         {children}
       </body>
     </html>

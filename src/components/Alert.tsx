@@ -33,11 +33,11 @@ export default function Alert({
   return (
     <PageWrap>
       <AlertWrap>
-        <Text size="16px" weight="600" color={Colors.contrast_color}>
+        <Text size="16px" weight="500" color={Colors.contrast_color}>
           {title}
         </Text>
         <Box height="12px" borderColor="none" />
-        <Text size="12px" weight="500">
+        <Text size="12px" weight="400">
           {content}
         </Text>
         <Box height="20px" borderColor="none" />
@@ -48,7 +48,7 @@ export default function Alert({
             backgroundColor={Colors.contrast_color}
             onClick={() => {}}
           >
-            <Text size="12px" weight="500" color={Colors.primary_color}>
+            <Text size="12px" weight="400" color={Colors.primary_color}>
               로그인
             </Text>
           </Button>
